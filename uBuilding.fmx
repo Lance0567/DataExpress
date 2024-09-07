@@ -1,0 +1,3825 @@
+object FrmBuilding: TFrmBuilding
+  Left = 750
+  Top = 0
+  Caption = 'Building'
+  ClientHeight = 800
+  ClientWidth = 545
+  Fill.Color = claBlack
+  Fill.Kind = Solid
+  Position = ScreenCenter
+  Quality = HighPerformance
+  StyleBook = dm.SB
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyUp = FormKeyUp
+  Left = 750
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    ClipParent = True
+    Size.Width = 545.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claCornsilk
+    object Layout1: TLayout
+      Align = Client
+      ClipChildren = True
+      Size.Width = 545.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object FormListMenu: TButton
+        Align = Left
+        IconTintColor = claOrange
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'drawertoolbutton'
+        TabOrder = 9
+        Text = 'FormListMenu'
+      end
+      object btSave: TButton
+        Align = Right
+        Images = dm.ImageList1
+        ImageIndex = 0
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 499.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 41.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'btSaveStyle1'
+        TabOrder = 11
+        OnClick = btSaveClick
+      end
+      object btnSaveEdit: TButton
+        Align = Right
+        Images = dm.ImageList1
+        ImageIndex = 0
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 494.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 41.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'btSaveStyle1'
+        TabOrder = 10
+        Visible = False
+        OnClick = btnSaveEditClick
+      end
+      object btHome: TButton
+        Align = Center
+        StyledSettings = [Family, Size, FontColor]
+        Images = dm.ImageList1
+        ImageIndex = 9
+        Margins.Left = 45.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Size.Width = 104.000000000000000000
+        Size.Height = 38.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'btHomeStyle1'
+        TabOrder = 0
+        Text = 'Home'
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TintColor = claBurlywood
+        OnClick = btHomeClick
+        object InnerGlowEffect1: TInnerGlowEffect
+          Softness = 0.400000005960464500
+          GlowColor = claDarkorange
+          Opacity = 0.899999976158142100
+        end
+      end
+    end
+  end
+  object Panel: TPanel
+    Align = Client
+    ClipParent = True
+    Margins.Left = 50.000000000000000000
+    Size.Width = 495.000000000000000000
+    Size.Height = 752.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'PanelStyle1'
+    TabOrder = 2
+    object ToolBar2: TToolBar
+      Align = Bottom
+      ClipParent = True
+      Position.Y = 704.000000000000000000
+      Size.Width = 495.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      TintColor = claCornsilk
+      object ButtonLayout: TLayout
+        Align = Center
+        ClipChildren = True
+        Size.Width = 284.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object nmPage: TNumberBox
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Client
+          TabOrder = 1
+          Cursor = crIBeam
+          DecimalDigits = 0
+          Value = 1.000000000000000000
+          ReadOnly = True
+          TextSettings.HorzAlign = Center
+          Size.Width = 62.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = nmPageChange
+        end
+        object btnNext: TButton
+          Align = Right
+          IconTintColor = claDarkorange
+          Position.X = 236.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'nexttoolbutton'
+          TabOrder = 0
+          Text = 'Back'
+          OnClick = btnNextClick
+        end
+        object Layout56: TLayout
+          Align = Left
+          Size.Width = 129.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object Label19: TLabel
+            Align = Right
+            Position.X = 72.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = 'Page'
+            TabOrder = 0
+          end
+          object btnBack: TButton
+            Align = Left
+            IconTintColor = claDarkorange
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'backtoolbutton'
+            TabOrder = 1
+            Text = 'Back'
+            OnClick = btnBackClick
+          end
+        end
+        object Layout57: TLayout
+          Align = Right
+          Position.X = 191.000000000000000000
+          Size.Width = 45.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+        end
+      end
+    end
+    object pnlDisasterRisk: TPanel
+      Align = Client
+      ClipParent = True
+      Size.Width = 495.000000000000000000
+      Size.Height = 704.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'PanelStyle1'
+      Visible = False
+      TabOrder = 18
+      object BackgroundA9: TRectangle
+        Align = Top
+        ClipChildren = True
+        Fill.Color = xFF1F2021
+        Margins.Top = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 495.000000000000000000
+        Size.Height = 210.000000000000000000
+        Size.PlatformDefault = False
+        XRadius = 25.000000000000000000
+        YRadius = 20.000000000000000000
+        object DisasterRisk: TLabel
+          Align = Client
+          AutoSize = True
+          ClipChildren = True
+          StyledSettings = [Family]
+          Margins.Left = 30.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 455.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 23.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          Text = 
+            'Disaster Risk Vulnerabilities | Risk Level 1-5 (1 Low, 3 Moderat' +
+            'e, 5 High)'
+          TabOrder = 4
+        end
+        object DisasterPageLayout: TLayout
+          Align = Bottom
+          ClipChildren = True
+          Margins.Left = 30.000000000000000000
+          Margins.Right = 30.000000000000000000
+          Position.X = 30.000000000000000000
+          Position.Y = 160.000000000000000000
+          Size.Width = 435.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 18
+          object btn4: TButton
+            Align = Left
+            AutoTranslate = False
+            StyledSettings = [Family, Size, Style]
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 230.000000000000000000
+            Position.Y = 10.000000000000000000
+            RepeatClick = True
+            Size.Width = 50.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 18
+            Text = '4'
+            TextSettings.FontColor = claWhite
+            TextSettings.WordWrap = True
+            TintColor = claDarkorange
+            OnClick = btn4Click
+            object FillRGBEffect4: TFillRGBEffect
+              Enabled = False
+              Color = claAqua
+            end
+          end
+          object btn1: TButton
+            Align = Left
+            AutoTranslate = False
+            StyledSettings = [Family, Size, Style]
+            Margins.Top = 10.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 65.000000000000000000
+            Position.Y = 10.000000000000000000
+            RepeatClick = True
+            Size.Width = 50.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 17
+            Text = '1'
+            TextSettings.FontColor = claWhite
+            TextSettings.WordWrap = True
+            TintColor = claDarkorange
+            ParentShowHint = False
+            ShowHint = False
+            OnClick = btn1Click
+            object FillRGBEffect2: TFillRGBEffect
+              Color = claAqua
+            end
+          end
+          object btn2: TButton
+            Align = Left
+            AutoTranslate = False
+            StyledSettings = [Family, Size, Style]
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 120.000000000000000000
+            Position.Y = 10.000000000000000000
+            RepeatClick = True
+            Size.Width = 50.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 16
+            Text = '2'
+            TextSettings.FontColor = claWhite
+            TextSettings.WordWrap = True
+            TintColor = claDarkorange
+            OnClick = btn2Click
+            object FillRGBEffect3: TFillRGBEffect
+              Enabled = False
+              Color = claAqua
+            end
+          end
+          object btn3: TButton
+            Align = Left
+            AutoTranslate = False
+            StyledSettings = [Family, Size, Style]
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 175.000000000000000000
+            Position.Y = 10.000000000000000000
+            RepeatClick = True
+            Size.Width = 50.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 15
+            Text = '3'
+            TextSettings.FontColor = claWhite
+            TextSettings.WordWrap = True
+            TintColor = claDarkorange
+            OnClick = btn3Click
+            object FillRGBEffect5: TFillRGBEffect
+              Enabled = False
+              Color = claAqua
+            end
+          end
+          object PagePart1: TLabel
+            Align = Left
+            AutoSize = True
+            StyledSettings = [Family, Style]
+            Margins.Top = 5.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 65.000000000000000000
+            Size.Height = 45.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Part :'
+            TabOrder = 19
+          end
+        end
+        object Layout43: TLayout
+          Align = Top
+          Margins.Left = 30.000000000000000000
+          Margins.Top = 20.000000000000000000
+          Margins.Right = 30.000000000000000000
+          Position.X = 30.000000000000000000
+          Position.Y = 20.000000000000000000
+          Size.Width = 435.000000000000000000
+          Size.Height = 67.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 21
+          object Glyph13: TGlyph
+            DisableInterpolation = True
+            Align = Left
+            Size.Width = 80.000000000000000000
+            Size.Height = 67.000000000000000000
+            Size.PlatformDefault = False
+            ImageIndex = 11
+            Images = dm.ImageList1
+          end
+          object Label20: TLabel
+            Align = Client
+            AutoSize = True
+            AutoTranslate = False
+            ClipChildren = True
+            StyledSettings = [Family]
+            Margins.Left = 15.000000000000000000
+            Size.Width = 340.000000000000000000
+            Size.Height = 67.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claWhite
+            Text = 'Household Details'
+            TabOrder = 0
+          end
+        end
+      end
+      object BackgroundB9: TRectangle
+        Align = Client
+        ClipChildren = True
+        Fill.Color = xFF1F2021
+        Margins.Top = 25.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Size.Width = 495.000000000000000000
+        Size.Height = 449.000000000000000000
+        Size.PlatformDefault = False
+        XRadius = 30.000000000000000000
+        YRadius = 30.000000000000000000
+        object DisasterLayout1: TVertScrollBox
+          Align = Contents
+          ClipChildren = True
+          Size.Width = 495.000000000000000000
+          Size.Height = 449.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Visible = False
+          Viewport.Width = 490.000000000000000000
+          Viewport.Height = 449.000000000000000000
+          object Checker1: TTMSFNCCheckGroup
+            Color = claNull
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 100.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 110.000000000000000000
+            Size.Width = 360.000000000000000000
+            Size.Height = 76.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+            Items.Strings = (
+              'Yes'
+              'No')
+            Font.Size = 18.000000000000000000
+            Font.Color = claLightblue
+            Font.Name = 'Segoe UI'
+            Columns = 2
+            Title.Text = 'Are you endangered with this Risk? :'
+            Title.Font.Size = 20.000000000000000000
+            Title.Font.Color = claWhite
+            Title.Font.Name = 'Segoe UI'
+            Fill.Kind = gfkNone
+            Fill.Color = claNull
+            OnCheckBoxClick = Checker1CheckBoxClick
+          end
+          object Layout47: TLayout
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 20.000000000000000000
+            Size.Width = 450.000000000000000000
+            Size.Height = 70.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 20
+            object Glyph14: TGlyph
+              DisableInterpolation = True
+              Align = Left
+              Size.Width = 71.000000000000000000
+              Size.Height = 70.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 12
+              Images = dm.ImageList1
+            end
+            object Label14: TLabel
+              Align = Client
+              AutoSize = True
+              StyledSettings = [Family]
+              Margins.Left = 15.000000000000000000
+              Size.Width = 364.000000000000000000
+              Size.Height = 70.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = 'Typhoon Risk Level Ctr.'
+              TabOrder = 15
+            end
+          end
+          object BLayout7: TLayout
+            Align = Top
+            Margins.Top = 50.000000000000000000
+            Position.Y = 1145.000000000000000000
+            Size.Width = 490.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+          end
+          object Layout48: TLayout
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Margins.Bottom = 150.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 196.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 749.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 21
+            object lytFlashFloodsAndDebris: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 383.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 25
+              object cbFlashfloodandDebrisFlow: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 26
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object FlashfloodandDebrisFlow: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Flashflood and Debris Flow | Risk Level? :'
+                TabOrder = 2
+              end
+            end
+            object lytFloods: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 504.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 24
+              object cbFloods: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 28
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object Floods: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Floods | Risk Level? :'
+                TabOrder = 2
+              end
+            end
+            object lytSeaLevel: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 141.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 22
+              object cbSeaLevelRise: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 32
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object SeaLevelRise: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Sea Level Rise | Risk Level? :'
+                TabOrder = 5
+              end
+            end
+            object lytDistructiveWinds: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 262.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 26
+              object cbDestructiveWinds: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 28
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object DestructiveWinds: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Distructive Winds | Risk Level? :'
+                TabOrder = 3
+              end
+            end
+            object lytStormSurge: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 20.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 21
+              object cbStormSurge: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 23
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 52.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object StormSurge: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Margins.Top = 10.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Storm Surge | Risk Level? :'
+                TabOrder = 1
+              end
+            end
+            object lytLandslide: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 625.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 23
+              object cbLandslide1: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 24
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object Landslide1: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Landslide | Risk Level? :'
+                TabOrder = 1
+              end
+            end
+          end
+        end
+        object DisasterLayout2: TVertScrollBox
+          Align = Contents
+          ClipChildren = True
+          Size.Width = 495.000000000000000000
+          Size.Height = 449.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Visible = False
+          Viewport.Width = 490.000000000000000000
+          Viewport.Height = 449.000000000000000000
+          object BLayout8: TLayout
+            Align = Top
+            Position.Y = 1145.000000000000000000
+            Size.Width = 490.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+          end
+          object Checker2: TTMSFNCCheckGroup
+            Color = claNull
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 130.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 110.000000000000000000
+            Size.Width = 330.000000000000000000
+            Size.Height = 76.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Items.Strings = (
+              'Yes'
+              'No')
+            Font.Size = 18.000000000000000000
+            Font.Color = claLightblue
+            Font.Name = 'Segoe UI'
+            Columns = 2
+            Title.Text = 'Are you endangered with this Risk?'
+            Title.Font.Size = 20.000000000000000000
+            Title.Font.Color = claWhite
+            Title.Font.Name = 'Segoe UI'
+            Fill.Kind = gfkNone
+            Fill.Color = claNull
+            OnCheckBoxClick = Checker2CheckBoxClick
+          end
+          object Layout49: TLayout
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 20.000000000000000000
+            Size.Width = 440.000000000000000000
+            Size.Height = 70.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 20
+            object Glyph15: TGlyph
+              DisableInterpolation = True
+              Align = Left
+              Size.Width = 71.000000000000000000
+              Size.Height = 70.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 14
+              Images = dm.ImageList1
+            end
+            object Label15: TLabel
+              Align = Client
+              AutoSize = True
+              StyledSettings = [Family]
+              Margins.Left = 15.000000000000000000
+              Size.Width = 354.000000000000000000
+              Size.Height = 70.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = 'Earthquake Risk Level Ctr.'
+              TabOrder = 16
+            end
+          end
+          object Layout50: TLayout
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Margins.Bottom = 200.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 196.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 749.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 19
+            object lytLandSlide2: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 141.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 25
+              object cbLandslide: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 25
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object Landslide2: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Landslide | Risk Level? :'
+                TabOrder = 9
+              end
+            end
+            object lytStructuralFailure: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 504.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 24
+              object cbStructuralFailure: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 27
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object StructuralFailure: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Structural Failure | Risk Level? :'
+                TabOrder = 2
+              end
+            end
+            object lytDamFailure: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 625.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 22
+              object cbDamFailureandFlashflood: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 31
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object DamFailureandFlashflood: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Dam Failure and Flashflood | Risk Level? :'
+                TabOrder = 1
+              end
+            end
+            object lytFireAndExplosion: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 383.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 26
+              object cbFireandExplosion: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 27
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object FireandExplosion: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Fire and Explosion | Risk Level? :'
+                TabOrder = 6
+              end
+            end
+            object lytLiquifaction: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 20.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 21
+              object cbLiquifaction: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 22
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 52.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object Liquifaction: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Margins.Top = 10.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Liquifaction | Risk Level? :'
+                TabOrder = 12
+              end
+            end
+            object lytTsunami: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 262.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 23
+              object cbTsunami: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 23
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object Tsunami: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Tsunami | Risk Level? :'
+                TabOrder = 7
+              end
+            end
+          end
+        end
+        object DisasterLayout3: TVertScrollBox
+          Align = Contents
+          ClipChildren = True
+          Size.Width = 495.000000000000000000
+          Size.Height = 449.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Visible = False
+          Viewport.Width = 490.000000000000000000
+          Viewport.Height = 449.000000000000000000
+          object BLayout9: TLayout
+            Align = Top
+            Position.Y = 1025.000000000000000000
+            Size.Width = 490.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+          end
+          object Checker3: TTMSFNCCheckGroup
+            Color = claNull
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 130.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 110.000000000000000000
+            Size.Width = 330.000000000000000000
+            Size.Height = 76.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Items.Strings = (
+              'Yes'
+              'No')
+            Font.Size = 18.000000000000000000
+            Font.Color = claLightblue
+            Font.Name = 'Segoe UI'
+            Columns = 2
+            Title.Text = 'Are you endangered with this Risk?'
+            Title.Font.Size = 20.000000000000000000
+            Title.Font.Color = claWhite
+            Title.Font.Name = 'Segoe UI'
+            Fill.Kind = gfkNone
+            Fill.Color = claNull
+            OnCheckBoxClick = Checker3CheckBoxClick
+          end
+          object Layout51: TLayout
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 20.000000000000000000
+            Size.Width = 440.000000000000000000
+            Size.Height = 70.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 22
+            object Glyph16: TGlyph
+              DisableInterpolation = True
+              Align = Left
+              Size.Width = 71.000000000000000000
+              Size.Height = 70.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 13
+              Images = dm.ImageList1
+            end
+            object Label16: TLabel
+              Align = Client
+              AutoSize = True
+              StyledSettings = [Family]
+              Margins.Left = 15.000000000000000000
+              Size.Width = 354.000000000000000000
+              Size.Height = 70.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = 'Volcanic Eruption Risk Level Ctr.'
+              TabOrder = 14
+            end
+          end
+          object Layout52: TLayout
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Margins.Bottom = 200.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 196.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 629.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 9
+            object lytLavaFlow: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 141.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 24
+              object cbLavaFlow: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 24
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object LavaFlow: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Lava Flow | Risk Level? :'
+                TabOrder = 8
+              end
+            end
+            object lytBushFire: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 504.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 23
+              object cbBushFire: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 26
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object BushFire: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Bush Fire | Risk Level? :'
+                TabOrder = 1
+              end
+            end
+            object lytMudflowAndLahar: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 383.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 25
+              object cbMudflowandLahar: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 26
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object MudflowandLahar: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Mudflow and Lahar | Risk Level? :'
+                TabOrder = 2
+              end
+            end
+            object lytAshFlowOrFall: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 20.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 21
+              object cbAshFlowOrFall: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 21
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object AshFlowOrFall: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Ash Flow/Fall | Risk Level? :'
+                TabOrder = 10
+              end
+            end
+            object lytVolcanicQuake: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 262.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 22
+              object cbVolcanicQuake: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 22
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object VolcanicQuake: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Volcanic Quake | Risk Level? :'
+                TabOrder = 6
+              end
+            end
+          end
+        end
+        object DisasterLayout4: TVertScrollBox
+          Align = Contents
+          ClipChildren = True
+          Size.Width = 495.000000000000000000
+          Size.Height = 449.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Viewport.Width = 490.000000000000000000
+          Viewport.Height = 449.000000000000000000
+          object Checker4: TTMSFNCCheckGroup
+            Color = claNull
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 130.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 110.000000000000000000
+            Size.Width = 330.000000000000000000
+            Size.Height = 76.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Items.Strings = (
+              'Yes'
+              'No')
+            Font.Size = 18.000000000000000000
+            Font.Color = claLightblue
+            Font.Name = 'Segoe UI'
+            Columns = 2
+            Title.Text = 'Are you endangered with this Risk?'
+            Title.Font.Size = 20.000000000000000000
+            Title.Font.Color = claWhite
+            Title.Font.Name = 'Segoe UI'
+            Fill.Kind = gfkNone
+            Fill.Color = claNull
+            Stroke.Color = claWhite
+            OnCheckBoxClick = Checker4CheckBoxClick
+          end
+          object Layout53: TLayout
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 20.000000000000000000
+            Size.Width = 440.000000000000000000
+            Size.Height = 70.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 24
+            object Glyph17: TGlyph
+              DisableInterpolation = True
+              Align = Left
+              Size.Width = 71.000000000000000000
+              Size.Height = 70.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 15
+              Images = dm.ImageList1
+            end
+            object Label17: TLabel
+              Align = Client
+              AutoSize = True
+              StyledSettings = [Family]
+              Margins.Left = 15.000000000000000000
+              Size.Width = 354.000000000000000000
+              Size.Height = 70.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = 'Pyroclastic Density Current Risk Level Ctr.'
+              TabOrder = 11
+            end
+          end
+          object Layout54: TLayout
+            Align = Top
+            Position.Y = 769.000000000000000000
+            Size.Width = 490.000000000000000000
+            Size.Height = 200.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+            object Button5: TButton
+              Align = Top
+              StyledSettings = [Family]
+              Margins.Left = 200.000000000000000000
+              Margins.Top = 30.000000000000000000
+              Margins.Right = 200.000000000000000000
+              Position.X = 200.000000000000000000
+              Position.Y = 94.000000000000000000
+              Size.Width = 90.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'btSubmitStyle1'
+              TabOrder = 2
+              Text = 'Submit'
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TintColor = claOrange
+              OnClick = btSubmitClick
+              object InnerGlowEffect5: TInnerGlowEffect
+                Softness = 0.400000005960464500
+                GlowColor = claDarkorange
+                Opacity = 0.899999976158142100
+              end
+            end
+            object btSubmitNew: TButton
+              Align = Top
+              StyledSettings = [Family]
+              Margins.Left = 110.000000000000000000
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 110.000000000000000000
+              Position.X = 110.000000000000000000
+              Position.Y = 20.000000000000000000
+              Size.Width = 270.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'btSubmitStyle1'
+              TabOrder = 1
+              Text = 'Submit and fill out Agriculture survey'
+              TextSettings.Font.Size = 15.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TintColor = claOrange
+              object InnerGlowEffect25: TInnerGlowEffect
+                Softness = 0.400000005960464500
+                GlowColor = claDarkorange
+                Opacity = 0.899999976158142100
+              end
+            end
+            object Button6: TButton
+              Align = Top
+              StyledSettings = [Family, Size]
+              Margins.Left = 200.000000000000000000
+              Margins.Top = 30.000000000000000000
+              Margins.Right = 200.000000000000000000
+              Position.X = 200.000000000000000000
+              Position.Y = 148.000000000000000000
+              Size.Width = 95.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'btSubmitStyle1'
+              TabOrder = 0
+              Text = 'Update'
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TintColor = claOrange
+              Visible = False
+              OnClick = btUpdateClick
+              object InnerGlowEffect26: TInnerGlowEffect
+                Softness = 0.400000005960464500
+                GlowColor = claDarkorange
+                Opacity = 0.899999976158142100
+              end
+            end
+          end
+          object Layout55: TLayout
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Margins.Bottom = 200.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 196.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 373.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            object lytDrought: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 141.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 23
+              object cbDrought: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 23
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object Drought: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Drought | Risk Level? :'
+                TabOrder = 1
+              end
+            end
+            object lytFireAndExplosion2: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 20.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 21
+              object cbFireandExplosion2: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 20
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object FireandExplosion2: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Fire and Explosion | Risk Level? :'
+                TabOrder = 5
+              end
+            end
+            object lytEpidemicAndPandemic: TLayout
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 30.000000000000000000
+              Position.Y = 262.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 22
+              object cbEpidemicAndPandemic: TComboEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Top
+                TabOrder = 21
+                ItemHeight = 19.000000000000000000
+                Items.Strings = (
+                  '1 - Low'
+                  '3 - Moderate'
+                  '5 - High')
+                ItemIndex = -1
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claAqua
+                Position.Y = 42.000000000000000000
+                StyledSettings = [Family, Style]
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 200.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object EpidemicandPandemic: TLabel
+                Align = Top
+                AutoSize = True
+                StyledSettings = [Family, Style]
+                Size.Width = 400.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.FontColor = claWhite
+                Text = 'Epidemic and Pandemic | Risk Level? :'
+                TabOrder = 0
+              end
+            end
+          end
+        end
+      end
+    end
+    object pnlBasicInformation: TPanel
+      Align = Client
+      Size.Width = 495.000000000000000000
+      Size.Height = 704.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'PanelStyle1'
+      TabOrder = 19
+      object BackgroundA1: TRectangle
+        OnTap = BackgroundA1Tap
+        Align = Top
+        ClipChildren = True
+        Fill.Color = xFF1F2021
+        Margins.Top = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 495.000000000000000000
+        Size.Height = 175.000000000000000000
+        Size.PlatformDefault = False
+        XRadius = 25.000000000000000000
+        YRadius = 20.000000000000000000
+        object TopLabel1: TLabel
+          Align = Client
+          AutoSize = True
+          ClipChildren = True
+          StyledSettings = [Family]
+          Margins.Left = 30.000000000000000000
+          Size.Width = 465.000000000000000000
+          Size.Height = 80.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 23.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          Text = 'Bldg-Structure Details'
+          TabOrder = 1
+        end
+        object Layout16: TLayout
+          Align = Top
+          Margins.Left = 30.000000000000000000
+          Margins.Top = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Position.X = 30.000000000000000000
+          Position.Y = 20.000000000000000000
+          Size.Width = 445.000000000000000000
+          Size.Height = 75.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object Glyph1: TGlyph
+            DisableInterpolation = True
+            Align = Left
+            Size.Width = 80.000000000000000000
+            Size.Height = 75.000000000000000000
+            Size.PlatformDefault = False
+            ImageIndex = 1
+            Images = dm.ImageList1
+          end
+          object SurveyForm: TLabel
+            Align = Client
+            AutoSize = True
+            ClipChildren = True
+            StyledSettings = [Family]
+            Margins.Left = 15.000000000000000000
+            Size.Width = 350.000000000000000000
+            Size.Height = 75.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 22.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claWhite
+            Text = 'Bldg-Structure Information Details'
+            TabOrder = 0
+          end
+        end
+      end
+      object BackgroundB1: TRectangle
+        Align = Client
+        ClipChildren = True
+        Fill.Color = xFF1F2021
+        Margins.Top = 25.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Size.Width = 495.000000000000000000
+        Size.Height = 484.000000000000000000
+        Size.PlatformDefault = False
+        XRadius = 30.000000000000000000
+        YRadius = 30.000000000000000000
+        object ScrollBar: TVertScrollBox
+          OnTap = ScrollBarTap
+          Align = Contents
+          ClipChildren = True
+          Size.Width = 495.000000000000000000
+          Size.Height = 484.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 490.000000000000000000
+          Viewport.Height = 484.000000000000000000
+          object BLayout: TLayout
+            Align = Top
+            Position.Y = 2103.000000000000000000
+            Size.Width = 490.000000000000000000
+            Size.Height = 200.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 14
+            object btSubmit: TButton
+              Align = Center
+              StyledSettings = [Family]
+              Margins.Left = 200.000000000000000000
+              Margins.Right = 200.000000000000000000
+              Margins.Bottom = 150.000000000000000000
+              Size.Width = 90.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'btSubmitStyle1'
+              TabOrder = 1
+              Text = 'Submit'
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TintColor = claOrange
+              OnClick = btSubmitClick
+              object InnerGlowEffect2: TInnerGlowEffect
+                Softness = 0.400000005960464500
+                GlowColor = claDarkorange
+                Opacity = 0.899999976158142100
+              end
+            end
+            object btUpdate: TButton
+              Align = Center
+              StyledSettings = [Family, Size]
+              Margins.Left = 200.000000000000000000
+              Margins.Right = 200.000000000000000000
+              Size.Width = 95.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'btSubmitStyle1'
+              TabOrder = 0
+              Text = 'Update'
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TintColor = claOrange
+              Visible = False
+              OnClick = btUpdateClick
+              object InnerGlowEffect8: TInnerGlowEffect
+                Softness = 0.400000005960464500
+                GlowColor = claDarkorange
+                Opacity = 0.899999976158142100
+              end
+            end
+          end
+          object lbBuildingAddress: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family, Style]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 15.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 1504.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Building Address :'
+            TabOrder = 22
+          end
+          object BuildingAddressEdit: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 12
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claAqua
+            Position.X = 30.000000000000000000
+            Position.Y = 1546.000000000000000000
+            ClipParent = True
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Size.Width = 440.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style]
+            OnKeyDown = edBuildingAddressKeyDown
+            OnKeyUp = BuildingAddressEditKeyUp
+          end
+          object lbBuildingCategories: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family, Style]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 15.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 1171.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Building Categories :'
+            TabOrder = 20
+          end
+          object lbBuildingName: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family, Style]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 15.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 1395.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Building Name :'
+            TabOrder = 24
+          end
+          object BuildingNameEdit: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 10
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claAqua
+            Position.X = 30.000000000000000000
+            Position.Y = 1437.000000000000000000
+            ClipParent = True
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Size.Width = 440.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style]
+            OnKeyDown = edBuildingNameKeyDown
+            OnKeyUp = BuildingNameEditKeyUp
+            object igeBuildingName: TInnerGlowEffect
+              Softness = 0.400000005960464500
+              GlowColor = claRed
+              Opacity = 0.899999976158142100
+              Enabled = False
+            end
+          end
+          object lbBuildingNo: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family, Style]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 460.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Building Number :'
+            TabOrder = 27
+          end
+          object edBuildingNo: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 2
+            KeyboardType = NumberPad
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claAqua
+            Position.X = 30.000000000000000000
+            Position.Y = 502.000000000000000000
+            ClipParent = True
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 150.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Size.Width = 310.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style]
+            OnKeyDown = edBuildingNoKeyDown
+            OnKeyUp = edBuildingNoKeyUp
+          end
+          object lbBuildingOwner: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family, Style]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 907.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Building Owner :'
+            TabOrder = 25
+          end
+          object lbBuildingPurokAddress: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family, Style]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 15.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 1613.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Building Purok Address :'
+            TabOrder = 23
+          end
+          object BuildingPurokAddressEdit: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 11
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claAqua
+            Position.X = 30.000000000000000000
+            Position.Y = 1655.000000000000000000
+            ClipParent = True
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Size.Width = 440.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style]
+            OnKeyDown = edBuildingPurokAddressKeyDown
+            OnKeyUp = BuildingPurokAddressEditKeyUp
+          end
+          object lbBuildingStoreysNo: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family, Style]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 1021.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Building Storeys Number :'
+            TabOrder = 5
+          end
+          object LocationListBox: TListBox
+            Align = Top
+            Padding.Top = 10.000000000000000000
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 40.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 174.000000000000000000
+            Size.Width = 420.000000000000000000
+            Size.Height = 132.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'ListBox1Style1'
+            TabOrder = 1
+            DisableMouseWheel = True
+            ShowScrollBars = False
+            DisableFocusEffect = True
+            DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+            DefaultItemStyles.GroupHeaderStyle = ''
+            DefaultItemStyles.GroupFooterStyle = ''
+            GroupingKind = Grouped
+            Viewport.Width = 420.000000000000000000
+            Viewport.Height = 132.000000000000000000
+            object lbLocationSensor: TListBoxItem
+              StyledSettings = [Family, Size, Style, Other]
+              Size.Width = 420.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Location Sensor'
+              object Layout9: TLayout
+                Align = Right
+                Position.X = 348.000000000000000000
+                Size.Width = 72.000000000000000000
+                Size.Height = 44.000000000000000000
+                Size.PlatformDefault = False
+                object swLocationSensorActive: TSwitch
+                  Align = Center
+                  IsChecked = False
+                  Margins.Right = 5.000000000000000000
+                  Size.Width = 44.000000000000000000
+                  Size.Height = 26.000000000000000000
+                  Size.PlatformDefault = False
+                  TouchTargetExpansion.Left = 6.000000000000000000
+                  TouchTargetExpansion.Top = 6.000000000000000000
+                  TouchTargetExpansion.Right = 6.000000000000000000
+                  TouchTargetExpansion.Bottom = 6.000000000000000000
+                  OnSwitch = swLocationSensorActiveSwitch
+                end
+              end
+            end
+            object lbTriggerDistance: TListBoxItem
+              TextSettings.Font.Size = 15.000000000000000000
+              StyledSettings = [Family, Style]
+              Position.Y = 44.000000000000000000
+              Size.Width = 462.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              Text = 'Trigger Distance'
+              Visible = False
+              object nbTriggerDistance: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Right
+                TabOrder = 0
+                Cursor = crIBeam
+                KeyboardType = Default
+                TextSettings.HorzAlign = Center
+                Position.X = 317.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Size.Width = 41.000000000000000000
+                Size.Height = 44.000000000000000000
+                Size.PlatformDefault = False
+                OnChange = nbTriggerDistanceChange
+              end
+              object Button1: TButton
+                Align = Right
+                Position.X = 363.000000000000000000
+                Position.Y = 5.000000000000000000
+                Size.Width = 47.000000000000000000
+                Size.Height = 34.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'stepperbuttonleft'
+                TabOrder = 39
+                Text = 'Button1'
+                OnClick = Button1Click
+              end
+              object Button2: TButton
+                Align = Right
+                Margins.Right = 5.000000000000000000
+                Position.X = 410.000000000000000000
+                Position.Y = 5.000000000000000000
+                Size.Width = 47.000000000000000000
+                Size.Height = 34.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'stepperbuttonright'
+                TabOrder = 40
+                Text = 'Button2'
+                OnClick = Button2Click
+              end
+            end
+            object lbAccuracy: TListBoxItem
+              TextSettings.Font.Size = 15.000000000000000000
+              StyledSettings = [Family, Style]
+              Position.Y = 44.000000000000000000
+              Size.Width = 462.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              Text = 'Accuracy'
+              Visible = False
+              object nbAccuracy: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Right
+                TabOrder = 0
+                Cursor = crIBeam
+                KeyboardType = Default
+                TextSettings.HorzAlign = Center
+                Position.X = 317.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Size.Width = 41.000000000000000000
+                Size.Height = 44.000000000000000000
+                Size.PlatformDefault = False
+                OnChange = nbAccuracyChange
+              end
+              object Button4: TButton
+                Align = Right
+                Margins.Right = 5.000000000000000000
+                Position.X = 410.000000000000000000
+                Position.Y = 5.000000000000000000
+                Size.Width = 47.000000000000000000
+                Size.Height = 34.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'stepperbuttonright'
+                TabOrder = 39
+                Text = 'Button4'
+                OnClick = Button4Click
+              end
+              object Button3: TButton
+                Align = Right
+                Position.X = 363.000000000000000000
+                Position.Y = 5.000000000000000000
+                Size.Width = 47.000000000000000000
+                Size.Height = 34.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'stepperbuttonleft'
+                TabOrder = 40
+                Text = 'Button3'
+                OnClick = Button3Click
+              end
+            end
+            object lbLongitude: TListBoxItem
+              StyledSettings = [Family, Size, Style, Other]
+              Position.Y = 44.000000000000000000
+              Size.Width = 420.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 4
+              Text = 'Longitude'
+              object Layout8: TLayout
+                Align = Right
+                Position.X = 112.000000000000000000
+                Size.Width = 308.000000000000000000
+                Size.Height = 44.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 47
+                object edLongitude: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Client
+                  StyleLookup = 'edLongitudeStyle1'
+                  TabOrder = 47
+                  KeyboardType = NumberPad
+                  ReadOnly = True
+                  TextSettings.Font.Size = 20.000000000000000000
+                  Size.Width = 308.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
+                end
+              end
+            end
+            object lbLatitude: TListBoxItem
+              StyledSettings = [Family, Size, Style, Other]
+              Position.Y = 88.000000000000000000
+              Size.Width = 420.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              Text = 'Latitude'
+              object Layout10: TLayout
+                Align = Right
+                Position.X = 112.000000000000000000
+                Size.Width = 308.000000000000000000
+                Size.Height = 44.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 47
+                object edLatitude: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Client
+                  StyleLookup = 'edLatitudeStyle1'
+                  TabOrder = 47
+                  KeyboardType = NumberPad
+                  ReadOnly = True
+                  TextSettings.Font.Size = 20.000000000000000000
+                  Size.Width = 308.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
+                end
+              end
+            end
+          end
+          object WebBrowser1: TWebBrowser
+            Align = Top
+            Size.Width = 462.000000000000000000
+            Size.Height = 361.000000000000000000
+            Size.PlatformDefault = False
+            Margins.Left = 30.000000000000000000
+            Margins.Right = 40.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 311.000000000000000000
+            WindowsEngine = IEOnly
+            Visible = False
+          end
+          object lbLocation: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family]
+            Margins.Left = 50.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 50.000000000000000000
+            Position.X = 50.000000000000000000
+            Position.Y = 139.000000000000000000
+            Size.Width = 390.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            Text = 'Location'
+            TabOrder = 16
+          end
+          object edId: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 0
+            ReadOnly = True
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claGray
+            Position.X = 30.000000000000000000
+            Position.Y = 67.000000000000000000
+            ClipParent = True
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 150.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Size.Width = 310.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style]
+          end
+          object id: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family, Style]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 25.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Building ID :'
+            TabOrder = 15
+          end
+          object lbMaterialUsed: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 1727.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Material Used :'
+            TabOrder = 17
+          end
+          object lbBuildingSubCategory: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family, Style]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 15.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 1283.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Building Sub-Category :'
+            TabOrder = 19
+          end
+          object cbMaterialUsed: TComboEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 13
+            ItemHeight = 19.000000000000000000
+            Items.Strings = (
+              'Strong Materials(Concrete, Brick, Stone, Wood, Galvanized Iron)'
+              'Light Materials (Bamboo, Sawali, Cogons, Nipa)'
+              'Mixed but Predominantly Light Materials'
+              'Mixed but Predominantly Salvaged Materials'
+              'Mixed but Predominantly Strong Materials'
+              'Salvaged/Makeshift materials')
+            ItemIndex = -1
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claAqua
+            Position.X = 30.000000000000000000
+            Position.Y = 1769.000000000000000000
+            StyledSettings = [Family, Style]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 80.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Size.Width = 380.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            OnKeyDown = cbMaterialUsedKeyDown
+            OnKeyUp = cbMaterialUsedKeyUp
+          end
+          object cbBuildingSubCategory: TComboEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 8
+            ItemHeight = 15.000000000000000000
+            ItemIndex = -1
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claAqua
+            Position.X = 30.000000000000000000
+            Position.Y = 1325.000000000000000000
+            StyledSettings = [Family, Style]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 100.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Size.Width = 360.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            OnKeyDown = cbBuildingSubCategoryKeyDown
+            OnKeyUp = cbBuildingSubCategoryKeyUp
+          end
+          object cbBuildingCategories: TComboEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 9
+            ItemHeight = 15.000000000000000000
+            ItemIndex = -1
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claAqua
+            Position.X = 30.000000000000000000
+            Position.Y = 1213.000000000000000000
+            StyledSettings = [Family, Style]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 100.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Size.Width = 360.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = cbBuildingCategoriesChange
+            OnKeyDown = cbBuildingCategoriesKeyDown
+            OnKeyUp = cbBuildingCategoriesKeyUp
+            OnClick = cbBuildingCategoriesClick
+          end
+          object lytBuildingStoreysNum: TLayout
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 1063.000000000000000000
+            Size.Width = 440.000000000000000000
+            Size.Height = 93.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 7
+            object nbBuildingStoreysNo: TNumberBox
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Left
+              StyleLookup = 'numberboxstyle'
+              TabOrder = 3
+              Cursor = crIBeam
+              Max = 10.000000000000000000
+              TextSettings.Font.Size = 18.000000000000000000
+              Position.Y = 29.000000000000000000
+              Margins.Top = 29.000000000000000000
+              Margins.Bottom = 29.000000000000000000
+              Size.Width = 137.000000000000000000
+              Size.Height = 35.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family, Style, FontColor]
+              OnKeyDown = nbBuildingStoreysNoKeyDown
+              OnKeyUp = nbBuildingStoreysNoKeyUp
+            end
+            object Layout13: TLayout
+              Align = Left
+              Margins.Left = 15.000000000000000000
+              Position.X = 152.000000000000000000
+              Size.Width = 57.000000000000000000
+              Size.Height = 93.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 25
+              object btnUp: TButton
+                Align = Top
+                IconTintColor = claAqua
+                Position.X = 4.000000000000000000
+                Size.Width = 48.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'arrowuptoolbutton'
+                TabOrder = 0
+                Text = 'btnUp'
+                OnClick = btnUpClick
+              end
+              object btnDown: TButton
+                Align = Bottom
+                IconTintColor = claAqua
+                Position.X = 4.000000000000000000
+                Position.Y = 45.000000000000000000
+                Size.Width = 48.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'arrowdowntoolbutton'
+                TabOrder = 1
+                Text = 'btnDown'
+                OnClick = btnDownClick
+              end
+            end
+          end
+          object BuildingOwnerEdit: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 3
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claAqua
+            Position.X = 30.000000000000000000
+            Position.Y = 949.000000000000000000
+            ClipParent = True
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Size.Width = 440.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style]
+            OnKeyDown = BuildingOwnerEditKeyDown
+            OnKeyUp = BuildingOwnerEditKeyUp
+            object igeBuildingOwner: TInnerGlowEffect
+              Softness = 0.400000005960464500
+              GlowColor = claRed
+              Opacity = 0.899999976158142100
+              Enabled = False
+            end
+          end
+          object lytBuilding: TLayout
+            Align = Top
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 40.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 616.000000000000000000
+            Size.Width = 420.000000000000000000
+            Size.Height = 251.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 29
+            object PhotoBackground: TRectangle
+              Align = Client
+              Fill.Color = xFF2B333E
+              Size.Width = 420.000000000000000000
+              Size.Height = 208.000000000000000000
+              Size.PlatformDefault = False
+              XRadius = 10.000000000000000000
+              YRadius = 10.000000000000000000
+              object imgCameraPicture: TImage
+                MultiResBitmap.Height = 100
+                MultiResBitmap.Width = 100
+                MultiResBitmap = <
+                  item
+                    Width = 100
+                    Height = 100
+                    PNG = {
+                      89504E470D0A1A0A0000000D494844520000006400000064080600000070E295
+                      54000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                      067649444154785EED9D7B88D45514C7DD5D53D2C8A407A62186990409058916
+                      494A0925652111F6B01209E92596847F44295120BDA8288A5E48141511457F04
+                      459210441184154651C1F6A40795FB1876E7B16B9F3BF73B8279EFFE7EB3333B
+                      F39BDF9E0F0C77667EE7DC7BCEF9CEFC667E77CEB2530CC3300CC3300CC373F0
+                      E0C1D9DC16E8A1D14E4647474F2E97CB5F178BC5DFB9BF444F1BED0001E622C6
+                      37BC3BAA0C0D0DFDC3734B75D86825147E1E627C2B2D0E8128FF72EC5C9919AD
+                      80BACF418CFD5E8223D13B6599CC8D8984429F5A2A957A55FB28FDFDFD056C57
+                      CBCD980828F042C4F851354FA4AFAF6F189FCBE56E3413EA3B9FD3D4F7BED4E9
+                      4194214459A3698C66404117F1CEF85935AE1B44A930C7F59ACE688434A7A94A
+                      A5F2E5C8C8C86B7A180451CACC75B5A635C603053CD35DF0A9A64110E31386E3
+                      B87521CA63D52723200A538E6ED1F4463D50B82588F1876A1904313E66982517
+                      F739E34479B87A308244B9532E461A28D839EE5A42350C42E13FC46EA65C0E83
+                      C33BBD551C7C77C8DC180B0AB5D45D6DAB6E4110634F4C8C1A1CDF2EF3B1D825
+                      732304455C96428C0F1866C8654C98EF56778AF29E6198EF49862EB9183528DE
+                      720A73A05AA50814EF7D865462D460DECD8832E26708C3BCCF3074CBC5A0182B
+                      07060606ABD58940D1DEA1B8D3E55217F85DEBBEF66AAA20CCFF32C354B94C5E
+                      28D6AA1462BCCD304D2EE38275D6A710C55DCB1C2597C90745BAD06D02FA7284
+                      A1486F313424460DD6BB0C5186FDCC611A7927763424BD3A85186F3234F515CB
+                      BA9720CA905F210CEBBE8BDDD172C93F295FA9EE9CDE2397A6C2BC2B07070707
+                      AA0BC5D9CBED18B9E417C4588B18459F7318C478896142C4A8411C2B0A85429F
+                      5F314CA552F908BB63E5923FC8F18A24316037B70915A306C5763B027FFB65C3
+                      20CA67D81D2F97FC4052EB10A3A43C83F0CE7891A1A5D703C475F6F0F0F05F3E
+                      823088F239C30972E97C48DA5D07547C7A6110E32986B65C3113DF19C562F137
+                      1F4918D76A84DD5CB9742E24B12185184F30B475FB823817974AA55F7C44615C
+                      970B76A7C8A5F320F81B5288E17EC3C8C45E12712CA0E83F54038BE01A2CC86B
+                      A15C3A0782DE8818497B488F32646A638F78DC6FF7DF55038C80283F91DF22B9
+                      641F82BD0531927659EF9779E620BC397C907FE5230DD331ADAB04795B0A31EE
+                      937966218F9310E50B851C846F677F329C2597EC41125B92C4809D32CF3CC43A
+                      1B513EF5618771BFDF90F772B9640782DA9A240636DB65DE3110F62C4471BFDD
+                      4771DB30E4B64A2EED8760EE566C51B0B94BE61D07B1CFE434BB47A904D146E9
+                      4572691F047B8F0F290E36DB64DEB190C60C4479CF67148633846B5D5D2B97D6
+                      C3E23B144B10770A839B65DEF190D2344471BFCF4421E72239AF934BEB60ED5D
+                      3E84301263B3CC7303A93951DEF059862177D7BABA412E130F013DA8B58310D0
+                      0801DD24F3DC418A3DDCDCAE741489B2512E1307622475063A3136C93CB7906A
+                      37B578C1671D466789DBE5D25C98DFB569BAAD8E2804E01A9AAF914BEE216557
+                      93C77DF66124CA1D72690ECCEB1676BD4B5124C67AB94C1A48DDD5E6115F8538
+                      D4E65EB9340673B9B7E6B37EDA3012E32AB94C4A2843623F3134D6BACA044E8C
+                      E7FD5C6110A3841857CA6552431D12FB89A9E74332AF0F7C7B707EC54F130631
+                      DC85D0A57231807A6C739F1B2A5110EAFA3443FA9FAA319E8AD3AB55EF082C6A
+                      7FBB1781BAA4E9277E8E2159148C9C18AF57BD22488C8BE56204A03ED751A7A4
+                      D655F7A21FBB9F18A3A4AFB66E6BA07DFB351D0475DA94E29DF280CCC330C969
+                      B11FFBB5CD7C814C8D1450AF689766B95CDECFF113651A0723F767C8BFCAAF4A
+                      A150E8E7F9153231EA80BAAD71A77995B28A6BA6E0F979324906E3D36BBD4A4E
+                      0C86F375C81807D4EF503FB1EB5C6198AF43E94194C5EA453A4F4F190D401D57
+                      A89EA93B568E68C9C1797A777777510F8F00A56F6470B7C3C06F5F4F4FCF563D
+                      CC25E4BE5777FFCFD6AEAEAE7DBA7F1849F56C18828A6D19C482CD0DCA33C44A
+                      99348CFDE163C6304132860992314C908C5177E3B33EC0421F62BD7CD3D8ADFB
+                      B984DC635D98BBC9BD57F70DC3300CC330C6F72DCBFD5782D07F263810DBCFC9
+                      0B636C91EC23F703BADF5ADC573F6E216C2FAB09D88561C6304132860992314C
+                      908C6182188661188661189380F16C2ED6DD28874F5D0D667959A3251054DD9B
+                      8B3A1E22B829C7F3B958633CD88561C6304132860992314C908CD19246397CEA
+                      6A30CBCB1A86611886611886611886611886915FA64CF90F69F4569434184187
+                      0000000049454E44AE426082}
+                    FileName = 
+                      'C:\Users\mcs\Documents\Embarcadero\Studio\Projects\SurveyForm4\a' +
+                      'ssets\img\icons8_Structural_100px.png'
+                  end
+                  item
+                    Scale = 2.000000000000000000
+                  end>
+                Align = Client
+                Margins.Left = 10.000000000000000000
+                Margins.Top = 10.000000000000000000
+                Margins.Right = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Size.Width = 400.000000000000000000
+                Size.Height = 188.000000000000000000
+                Size.PlatformDefault = False
+              end
+            end
+            object btnTakePhoto: TButton
+              Align = MostBottom
+              StyledSettings = [Family, Size, Style]
+              Position.Y = 208.000000000000000000
+              Size.Width = 420.000000000000000000
+              Size.Height = 43.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Take Photo'
+              TextSettings.FontColor = claWhite
+              TintColor = claAqua
+              OnClick = btnTakePhotoClick
+            end
+          end
+          object Label7: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family, Style]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 574.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Building Photo :'
+            TabOrder = 26
+          end
+          object edStructureAssessment: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 21
+            KeyboardType = NumberPad
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claAqua
+            Position.X = 30.000000000000000000
+            Position.Y = 1891.000000000000000000
+            ClipParent = True
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Margins.Bottom = 180.000000000000000000
+            Size.Width = 440.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style]
+          end
+          object lbStructureAssessment: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 1849.000000000000000000
+            Size.Width = 440.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Structure Assessment (Cost) :'
+            TabOrder = 6
+          end
+          object lbElavation: TLabel
+            Align = Top
+            AutoSize = True
+            ClipParent = True
+            StyledSettings = [Family]
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 30.000000000000000000
+            Position.Y = 346.000000000000000000
+            Size.Width = 440.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Elavation :'
+            TabOrder = 4
+          end
+          object edElavation: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 18
+            KeyboardType = NumberPad
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claAqua
+            Position.X = 30.000000000000000000
+            Position.Y = 388.000000000000000000
+            ClipParent = True
+            Margins.Left = 30.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 150.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Size.Width = 310.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style]
+          end
+        end
+      end
+    end
+  end
+  object mtvMenu2: TMultiView
+    DrawerOptions.DurationSliding = 0.150000005960464500
+    DrawerOptions.TouchAreaSize = 15.000000000000000000
+    PopoverOptions.StyleLookup = '#FFf9f9f9'
+    PopoverOptions.PopupHeight = 220.000000000000000000
+    MasterButton = FormListMenu
+    Mode = Drawer
+    NavigationPaneOptions.CollapsedWidth = 48.000000000000000000
+    ClipParent = True
+    Size.Width = 250.000000000000000000
+    Size.Height = 752.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 3
+    object rect_menu2: TRectangle
+      Align = Contents
+      ClipChildren = True
+      Fill.Color = xFF2A333E
+      Size.Width = 250.000000000000000000
+      Size.Height = 752.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object FloatAnimation1: TFloatAnimation
+        AnimationType = InOut
+        Duration = 0.500000000000000000
+        Interpolation = Circular
+        PropertyName = 'Width'
+        StartValue = 0.000000000000000000
+        StopValue = 260.000000000000000000
+      end
+      object menu_2: TLayout
+        Align = Contents
+        Size.Width = 250.000000000000000000
+        Size.Height = 752.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object lytExit: TLayout
+          Align = MostBottom
+          Position.Y = 700.000000000000000000
+          Size.Width = 250.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Layout36: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Path1: TPath
+              Data.Path = {
+                2200000000000000000080410000884101000000000080410000604101000000
+                0000104100006041010000000000104100002041010000000000804100002041
+                01000000000080410000E040010000000000A841000040410100000000008041
+                000088410000000000006041000000400200000051AC71410000004002000000
+                00008041BC4E394002000000000080410000804001000000000080410000C040
+                01000000000060410000C040010000000000604100008040010000000000A040
+                00008040010000000000A0400000A04101000000000060410000A04101000000
+                000060410000904101000000000080410000904101000000000080410000A041
+                020000000000804129D6A8410200000051AC71410000B0410200000000006041
+                0000B041010000000000A0400000B04102000000BC4E79400000B04102000000
+                0000404029D6A84102000000000040400000A041010000000000404000008040
+                0200000001004040BA4E394002000000BD4E7940FEFFFF3F020000000100A040
+                00000040010000000000604100000040030000000000604100000040}
+              Fill.Color = claOrange
+              Margins.Left = 15.000000000000000000
+              Margins.Top = 12.000000000000000000
+              Margins.Right = 15.000000000000000000
+              Margins.Bottom = 12.000000000000000000
+              Position.X = 15.000000000000000000
+              Position.Y = 12.000000000000000000
+              Size.Width = 28.000000000000000000
+              Size.Height = 27.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Kind = None
+            end
+          end
+          object Layout37: TLayout
+            Align = Client
+            Size.Width = 200.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label2: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 4.000000000000000000
+              Size.Width = 196.000000000000000000
+              Size.Height = 52.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Sign out'
+              TabOrder = 0
+            end
+          end
+          object SpeedButton6: TSpeedButton
+            Align = Contents
+            Size.Width = 250.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object rec_background: TRectangle
+          Align = Top
+          ClipChildren = True
+          Corners = [BottomLeft, BottomRight]
+          Fill.Color = claDarkorange
+          Size.Width = 250.000000000000000000
+          Size.Height = 129.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 24.000000000000000000
+          YRadius = 24.000000000000000000
+          object Label3: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Margins.Left = 10.000000000000000000
+            Size.Width = 240.000000000000000000
+            Size.Height = 129.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'toollabel'
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claWhite
+            Text = 'Forms'
+            TabOrder = 0
+          end
+          object SpeedButton7: TSpeedButton
+            Align = Left
+            ModalResult = 5
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 2.000000000000000000
+            Position.Y = 2.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'detailstoolbutton'
+            Visible = False
+          end
+          object Circle1: TCircle
+            Fill.Color = claOrange
+            Position.X = 89.000000000000000000
+            Position.Y = -48.000000000000000000
+            Size.Width = 193.000000000000000000
+            Size.Height = 209.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+          end
+          object Circle2: TCircle
+            Fill.Color = xFFF7B742
+            Position.X = 120.000000000000000000
+            Position.Y = -48.000000000000000000
+            Size.Width = 289.000000000000000000
+            Size.Height = 209.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+          end
+          object ShadowEffect4: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 180.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+        object userLayout: TLayout
+          Align = Top
+          ClipChildren = True
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 134.000000000000000000
+          Size.Width = 240.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object Layout45: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Rectangle2: TRectangle
+              Align = Client
+              Fill.Color = claGray
+              Margins.Top = 3.000000000000000000
+              Margins.Bottom = 3.000000000000000000
+              Size.Width = 50.000000000000000000
+              Size.Height = 46.000000000000000000
+              Size.PlatformDefault = False
+              XRadius = 5.000000000000000000
+              YRadius = 5.000000000000000000
+              object Glyph25: TGlyph
+                Align = Center
+                Size.Width = 30.000000000000000000
+                Size.Height = 30.000000000000000000
+                Size.PlatformDefault = False
+                ImageIndex = 59
+                Images = dm.ImageList1
+              end
+            end
+          end
+          object Layout46: TLayout
+            Align = Client
+            Size.Width = 190.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object lUser: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 10.000000000000000000
+              Size.Width = 180.000000000000000000
+              Size.Height = 52.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = 'lUser'
+              TabOrder = 0
+            end
+          end
+        end
+        object lytHome: TLayout
+          Align = Top
+          ClipChildren = True
+          Position.Y = 191.000000000000000000
+          Size.Width = 250.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 9
+          object Layout34: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Glyph7: TGlyph
+              DisableInterpolation = True
+              Align = Center
+              Size.Width = 30.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 81
+              Images = dm.ImageList1
+            end
+          end
+          object Layout44: TLayout
+            Align = Client
+            Size.Width = 200.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label18: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 4.000000000000000000
+              Size.Width = 196.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Purok Details'
+              TabOrder = 0
+            end
+          end
+          object Line9: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 51.000000000000000000
+            Size.Width = 250.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+          object Line7: TLine
+            LineType = Top
+            Size.Width = 250.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+          object SpeedButton3: TSpeedButton
+            Align = Contents
+            Size.Width = 250.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'SpeedButton2Style1'
+            OnClick = btnPurokClick
+          end
+        end
+        object Layout19: TLayout
+          Align = Top
+          ClipChildren = True
+          Position.Y = 295.000000000000000000
+          Size.Width = 250.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          object Layout21: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Glyph6: TGlyph
+              DisableInterpolation = True
+              Align = Center
+              Size.Width = 30.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 61
+              Images = dm.ImageList1
+            end
+          end
+          object Layout22: TLayout
+            Align = Client
+            Size.Width = 200.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label9: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 4.000000000000000000
+              Size.Width = 196.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Household Details'
+              TabOrder = 0
+            end
+          end
+          object Line11: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 51.000000000000000000
+            Size.Width = 250.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+          object Line12: TLine
+            LineType = Top
+            Size.Width = 250.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+          object SpeedButton5: TSpeedButton
+            Align = Contents
+            Size.Width = 250.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'SpeedButton2Style1'
+            OnClick = btnHouseholdClick
+          end
+        end
+        object Layout20: TLayout
+          Align = Top
+          ClipChildren = True
+          Position.Y = 347.000000000000000000
+          Size.Width = 250.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          object Layout23: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Glyph5: TGlyph
+              DisableInterpolation = True
+              Align = Center
+              Size.Width = 30.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 62
+              Images = dm.ImageList1
+            end
+          end
+          object Layout27: TLayout
+            Align = Client
+            Size.Width = 200.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label8: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 4.000000000000000000
+              Size.Width = 196.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Family Details'
+              TabOrder = 0
+            end
+          end
+          object Line8: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 51.000000000000000000
+            Size.Width = 250.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+          object Line10: TLine
+            LineType = Top
+            Size.Width = 250.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+          object SpeedButton8: TSpeedButton
+            Align = Contents
+            Size.Width = 250.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'SpeedButton2Style1'
+            OnClick = btnFamilyClick
+          end
+        end
+        object Layout28: TLayout
+          Align = Top
+          ClipChildren = True
+          Position.Y = 399.000000000000000000
+          Size.Width = 250.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+          object Layout29: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Glyph9: TGlyph
+              DisableInterpolation = True
+              Align = Center
+              Size.Width = 30.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 63
+              Images = dm.ImageList1
+            end
+          end
+          object Layout33: TLayout
+            Align = Client
+            Size.Width = 200.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label5: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 4.000000000000000000
+              Size.Width = 196.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'RBI Details'
+              TabOrder = 0
+            end
+          end
+          object Line5: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 51.000000000000000000
+            Size.Width = 250.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+          object Line6: TLine
+            LineType = Top
+            Size.Width = 250.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+          object SpeedButton9: TSpeedButton
+            Align = Contents
+            Size.Width = 250.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'SpeedButton2Style1'
+            OnClick = btnRBIClick
+          end
+        end
+        object Layout35: TLayout
+          Align = Top
+          ClipChildren = True
+          Position.Y = 451.000000000000000000
+          Size.Width = 250.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          object Layout38: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Glyph11: TGlyph
+              DisableInterpolation = True
+              Align = Center
+              Size.Width = 30.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 55
+              Images = dm.ImageList1
+              object InnerGlowEffect4: TInnerGlowEffect
+                Softness = 0.400000005960464500
+                GlowColor = claOrange
+                Opacity = 0.899999976158142100
+              end
+            end
+          end
+          object Layout39: TLayout
+            Align = Client
+            Size.Width = 200.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label11: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 4.000000000000000000
+              Size.Width = 196.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Tables'
+              TabOrder = 0
+            end
+          end
+          object Line15: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 51.000000000000000000
+            Size.Width = 250.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+          object Line14: TLine
+            LineType = Top
+            Size.Width = 250.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+          object SpeedButton10: TSpeedButton
+            Align = Contents
+            Size.Width = 250.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'SpeedButton2Style1'
+            OnClick = btnTablesClick
+          end
+        end
+        object Layout40: TLayout
+          Align = Top
+          ClipChildren = True
+          Position.Y = 243.000000000000000000
+          Size.Width = 250.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 8
+          object Layout41: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Glyph12: TGlyph
+              DisableInterpolation = True
+              Align = Center
+              Size.Width = 30.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 60
+              Images = dm.ImageList1
+              object FillRGBEffect7: TFillRGBEffect
+                Color = claAqua
+              end
+            end
+          end
+          object Layout42: TLayout
+            Align = Client
+            Size.Width = 200.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label13: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 4.000000000000000000
+              Size.Width = 196.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claGray
+              TextSettings.HorzAlign = Center
+              Text = 'Building Details'
+              TabOrder = 0
+            end
+          end
+          object Line17: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 51.000000000000000000
+            Size.Width = 250.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+          object Line18: TLine
+            LineType = Top
+            Size.Width = 250.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+          object SpeedButton11: TSpeedButton
+            Align = Contents
+            Size.Width = 250.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'SpeedButton2Style1'
+            OnClick = btnBuildingClick
+          end
+        end
+      end
+    end
+  end
+  object mtvMenu: TMultiView
+    DrawerOptions.TouchAreaSize = 15.000000000000000000
+    PopoverOptions.StyleLookup = '#FFf9f9f9'
+    PopoverOptions.PopupHeight = 220.000000000000000000
+    Mode = NavigationPane
+    NavigationPaneOptions.CollapsedWidth = 48.000000000000000000
+    ClipParent = True
+    Size.Width = 250.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object rect_menu: TRectangle
+      Align = Contents
+      ClipChildren = True
+      Fill.Color = xFF2A333E
+      Size.Width = 48.000000000000000000
+      Size.Height = 752.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object AnimationMenu: TFloatAnimation
+        AnimationType = InOut
+        Duration = 0.500000000000000000
+        Interpolation = Circular
+        PropertyName = 'Width'
+        StartValue = 0.000000000000000000
+        StopValue = 260.000000000000000000
+      end
+      object menu_1: TLayout
+        Align = Contents
+        Size.Width = 48.000000000000000000
+        Size.Height = 752.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Layout2: TLayout
+          Align = Top
+          ClipChildren = True
+          Size.Width = 48.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          object Layout3: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Glyph19: TGlyph
+              DisableInterpolation = True
+              Align = Center
+              Size.Width = 30.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 81
+              Images = dm.ImageList1
+            end
+          end
+          object Layout4: TLayout
+            Align = Client
+            Size.Width = 0.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label23: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 4.000000000000000000
+              Size.Width = 196.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Building'
+              TabOrder = 0
+            end
+          end
+          object btnPurok: TSpeedButton
+            Align = Contents
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'SpeedButton2Style1'
+            OnClick = btnPurokClick
+          end
+          object Line1: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 51.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+        end
+        object Layout7: TLayout
+          Align = Top
+          ClipChildren = True
+          Position.Y = 104.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object Layout5: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Glyph2: TGlyph
+              DisableInterpolation = True
+              Align = Center
+              Size.Width = 30.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 61
+              Images = dm.ImageList1
+            end
+          end
+          object Layout6: TLayout
+            Align = Client
+            Size.Width = 0.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label1: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 4.000000000000000000
+              Size.Width = 196.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Building'
+              TabOrder = 0
+            end
+          end
+          object btnHousehold: TSpeedButton
+            Align = Contents
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'SpeedButton2Style1'
+            OnClick = btnHouseholdClick
+          end
+          object Line2: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 51.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+        end
+        object Layout11: TLayout
+          Align = Top
+          ClipChildren = True
+          Position.Y = 156.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object Layout12: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Glyph3: TGlyph
+              DisableInterpolation = True
+              Align = Center
+              Size.Width = 30.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 62
+              Images = dm.ImageList1
+            end
+          end
+          object Layout14: TLayout
+            Align = Client
+            Size.Width = 0.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label4: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 4.000000000000000000
+              Size.Width = 196.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Building'
+              TabOrder = 0
+            end
+          end
+          object btnFamily: TSpeedButton
+            Align = Contents
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'SpeedButton2Style1'
+            OnClick = btnFamilyClick
+          end
+          object Line3: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 51.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+        end
+        object Layout15: TLayout
+          Align = Top
+          ClipChildren = True
+          Position.Y = 208.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object Layout17: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Glyph4: TGlyph
+              DisableInterpolation = True
+              Align = Center
+              Size.Width = 30.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 63
+              Images = dm.ImageList1
+            end
+          end
+          object Layout18: TLayout
+            Align = Client
+            Size.Width = 0.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label6: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 4.000000000000000000
+              Size.Width = 196.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Building'
+              TabOrder = 0
+            end
+          end
+          object btnRBI: TSpeedButton
+            Align = Contents
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'SpeedButton2Style1'
+            OnClick = btnRBIClick
+          end
+          object Line4: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 51.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+        end
+        object Layout24: TLayout
+          Align = Top
+          ClipChildren = True
+          Position.Y = 260.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Layout25: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Glyph8: TGlyph
+              DisableInterpolation = True
+              Align = Center
+              Size.Width = 30.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 55
+              Images = dm.ImageList1
+              object InnerGlowEffect3: TInnerGlowEffect
+                Softness = 0.400000005960464500
+                GlowColor = claOrange
+                Opacity = 0.899999976158142100
+              end
+            end
+          end
+          object Layout26: TLayout
+            Align = Client
+            Size.Width = 0.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label10: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 4.000000000000000000
+              Size.Width = 196.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Building'
+              TabOrder = 0
+            end
+          end
+          object btnTables: TSpeedButton
+            Align = Contents
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'SpeedButton2Style1'
+            OnClick = btnTablesClick
+          end
+          object Line13: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 51.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+        end
+        object Layout30: TLayout
+          Align = Top
+          ClipChildren = True
+          Position.Y = 52.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          object Layout31: TLayout
+            Align = Left
+            Size.Width = 50.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Glyph10: TGlyph
+              DisableInterpolation = True
+              Align = Center
+              Size.Width = 30.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              ImageIndex = 60
+              Images = dm.ImageList1
+              object FillRGBEffect1: TFillRGBEffect
+                Color = claAqua
+              end
+            end
+          end
+          object Layout32: TLayout
+            Align = Client
+            Size.Width = 0.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label12: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Margins.Left = 4.000000000000000000
+              Size.Width = 196.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Building'
+              TabOrder = 0
+            end
+          end
+          object btnBuilding: TSpeedButton
+            Align = Contents
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'SpeedButton2Style1'
+            OnClick = btnBuildingClick
+          end
+          object Line16: TLine
+            Align = Bottom
+            LineType = Bottom
+            Position.Y = 51.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+        end
+      end
+    end
+  end
+  object LocationSensor1: TLocationSensor
+    ActivityType = Other
+    UsageAuthorization = WhenInUse
+    OnLocationChanged = LocationSensor1LocationChanged
+    Left = 470
+    Top = 391
+  end
+  object ActionList1: TActionList
+    Left = 472
+    Top = 256
+    object TakePhotoFromCameraAction1: TTakePhotoFromCameraAction
+      Category = 'Media Library'
+      OnDidFinishTaking = TakePhotoFromCameraAction1DidFinishTaking
+    end
+  end
+end

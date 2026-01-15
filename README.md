@@ -58,15 +58,15 @@ The app leverages **SQLite** for robust local persistence and features a modern,
 <table>
   <tr>
     <td align="center">
+      <h3>Login Form</h3>
+      <img src="assets/login.jpg" width="200" alt="Login Screen">
+    </td>
+    <td align="center">
       <h3>Data Entry</h3>
       <img src="assets/dcf.jpg" width="200" alt="Entry Screen">
     </td>
     <td align="center">
-      <h3>Database View</h3>
-      <img src="assets/pruok.jpg" width="200" alt="Database View">
-    </td>
-    <td align="center">
-      <h3>Building Master Details</h3>
+      <h3>Purok Master Details</h3>
       <img src="assets/building.jpg" width="200" alt="Master Details">
     </td>
   </tr>
